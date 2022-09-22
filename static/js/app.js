@@ -24,3 +24,24 @@ function buildTable(data) {
         );
     });
 }
+
+// Create a new function that listens to and handles what occurs after an input is given
+function handleClick(){
+    let date = d3.select("#datetime").property("value");
+    let filterData= tableData;
+
+    // create an if statement for JS to check the date, if one is present return only the data with a date.
+    if(date) {
+        filterData = filterData.filter(row =>row.datetime === date);
+    }
+    // Rebuild the table using the filtered data
+  // @NOTE: If no date was entered, then filteredData will
+  // just be the original tableData.
+    buildTable(filterData);
+// Attach an event to listen for the form button
+    d3.select("#filter-btn").on("click", handleClick);
+// Build the table when the page loads
+    buildTable(tableData);
+}
+
+
