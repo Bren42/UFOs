@@ -14,14 +14,14 @@
     />
     <link rel="stylesheet" href="static/css/style.css">
 </head>
-<body class ="bg-dark">
+<body>
     <div class = "wrapper">
-        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="index.html">UFO Sightings</a>
         </nav>
     </div>
     <div class= "jumbotron">
-        <h1 class="display-4">The Truth Is Out There</h1>
+        <h1>The Truth Is Out There</h1>
     </div>
     <div class="container-fluid">
         <div class="row">
@@ -42,22 +42,22 @@
      <div class="container-fluid">
        <div class="row">
         <div class="col-md-3">
-        <form class="bg-dark">
+        <form>
             <p>Filter Search</p>
              </form>
-     <ul class="list-group bg-dark">
+     <ul class="list-group">
+        <li class="list-group-item">
+          <label for="date">Enter Date</label>
+          <input type="text" placeholder="1/10/2010" id="datetime"/>
+        </li>
+       <li class="list-group-item">
+        <button id="filter=btn" type="button" class="btn btn-default">Filter Table</button>
+       </li>
      </ul>
-     <li class="list-group-item bg-dark">
-         <label for="date">Enter Date</label>
-         <input type="text" placeholder="1/10/2010" id="datetime"/>
-     </li>
-     <li class="list-group-item bg-dark">
-         <button id="filter-btn" type="button" class="btn btn-success">Filter Table</button>
-     </li>
 
         </div>
            <div class="col-md-9">
-               <table class="table table-bordered table-hover">
+               <table class="table table-bordered table-striped">
                  <thead>
                      <tr>
                          <th>Date</th>
